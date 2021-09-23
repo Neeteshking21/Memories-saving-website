@@ -1,0 +1,35 @@
+{
+  "name": "memories-saving-website",
+  "version": "1.0.0",
+  "description": "Memories saving website",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neeteshking21/Memories-saving-website.git"
+  },
+  "keywords": [
+    "Memories",
+    "Memory",
+    "FERN"
+  ],
+  "author": "Neetesh Kumar Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neeteshking21/Memories-saving-website/issues"
+  },
+  "homepage": "https://github.com/Neeteshking21/Memories-saving-website#readme",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

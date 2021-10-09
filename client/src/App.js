@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './components/Forms/Form'
 import Posts from './components/Posts/Posts'
-import {Container, AppBar, Typography, Grow, Grid} from '@mui/material'
+import {Container,Grow, Grid} from '@mui/material'
 import Memories from './images/images.png'
 import useStyles from './Style'
 
@@ -11,21 +11,23 @@ const App = () => {
 
     return (
        <Container maxWidth="lg"  >              
-         <AppBar className="appbar" position="static" color="inherit" bgcolor="black">
-           <Typography varaint="h2" align="center">Memories</Typography>
-           <img src={Memories} alt="memories" height="300" width="300" />
-         </AppBar>
+         <header className={classes.appBar} position="static" color="inherit" bgcolor="black">
+           <p className={classes.heading} varaint="h2" align="center">Memories</p>
+           <img src={Memories} className={classes.img} alt="memories" height="300" width="300" />
+         </header>
          <Grow in>
-           <Container>
-            <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+           <div >
+            <Grid className={classes.body} container alignItems="stretch" spacing={3}>
               <Grid item xs={12} sm={7}>
                 <Posts />
+                <Posts />
+                <Posts /> 
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Form />
               </Grid>
             </Grid>
-           </Container>
+           </div>
          </Grow>
        </Container>
     )

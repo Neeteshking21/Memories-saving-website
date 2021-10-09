@@ -5,7 +5,7 @@ import {Container, AppBar, Typography, Grow, Grid} from '@mui/material'
 
 const App = () => {
     return (
-       <Container maxWidth="lg">
+       <Container maxWidth="lg">              
          <AppBar position="static" color="inherit">
            <Typography varaint="h2" align="center">Memories</Typography>
            <img src="./" alt="memories" height="60" />

@@ -1,9 +1,7 @@
 import express from 'express'
-
+import { getPosts } from '../controller/post.js'
 const router = express.Router()
 
-//  localhost:PORT/
+router.post('/', getPosts)
 
-router.get('/', (req, res)=>{
-    res.send("THIS WORKS")
-})git 
+export default router

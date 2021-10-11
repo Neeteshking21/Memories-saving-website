@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Form from './components/Forms/Form'
 import Posts from './components/Posts/Posts'
 import {Container,Grow, Grid} from '@mui/material'
+import { useDispatch } from 'react-redux'
 import Memories from './images/images.png'
 import useStyles from './Style'
+import {getPost} from './actions/posts'
 
 const App = () => {
 
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+      dispatch(getPost())
+    }, [dispatch])
 
     return (
        <Container maxWidth="lg"  >              
@@ -19,8 +26,6 @@ const App = () => {
            <div >
             <Grid className={classes.body} container alignItems="stretch" spacing={3}>
               <Grid item xs={12} sm={7}>
-                <Posts />
-                <Posts />
                 <Posts /> 
               </Grid>
               <Grid item xs={12} sm={4}>

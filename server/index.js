@@ -17,11 +17,9 @@ app.use(express.json({limit: "50mb", extended: true}))
 app.use(express.urlencoded({limit: "50mb", extended: true}))
 app.use(morgan('dev'))
 
-
-app.get('/', (req, res) => res.send("value"))
 app.use('/posts', postRoutes)
 
-
+ 
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`)
 })

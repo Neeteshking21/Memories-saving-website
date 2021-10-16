@@ -6,10 +6,12 @@ import { useSelector } from 'react-redux'
 const Posts = () => {
 
     const posts = useSelector((state)=> state.posts)
-    console.log(posts)
     return (
         <div>
-            <h1>Here all post will be render</h1>
+            {posts.map((home, index)=> 
+                <h1 key={index}>{home.title}</h1>
+            )}
+            
         </div>
     )
 }

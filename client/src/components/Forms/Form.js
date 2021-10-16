@@ -30,6 +30,7 @@ const Form = () => {
           <input type="text" name="message" placeholder="Message" value={postData.message} onChange={(e)=>setPostData({...postData, message: e.target.value})} />
           <input types="text" name="tag" placeholder="Tag" value={postData.tags} onChange={(e)=>setPostData({...postData, tags: e.target.value})} />
           <FileBase type="file" multiple={false} onDone={({base64})=>setPostData({...postData, selectedFile:base64})} />
+
           <input type="submit" value="Submit" />
           <input type="reset" value="Reset" />
         </div>

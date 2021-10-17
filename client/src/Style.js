@@ -2,6 +2,7 @@ import { makeStyles } from '@mui/styles'
 
 export default makeStyles(() => ({
   appBar: {
+    backgroundColor:'white',
     height: 'fit-content',
     marginTop: '10px',
     padding: '0.5rem',
@@ -27,5 +28,4 @@ export default makeStyles(() => ({
     justifyContent: 'space-between',
     alignItems: 'baseline'
   },
-  
 }))

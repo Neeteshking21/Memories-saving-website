@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles'
 
 export default makeStyles(()=>({ 
     container:{
-        marginTop: '4vw',
+        marginTop: '4vh',
         width: 'fit-content',
     },
     form:{
@@ -15,10 +15,11 @@ export default makeStyles(()=>({
         '& input':{
             height:"40px",
             width:'auto',
+            textAlign: 'center',
             marginTop:'1vw',
             outline:'none',
             border:'0',
-            borderBottom:'1px solid green',
+            borderBottom:'1px solid #EE5522',
             borderRadius:'5px',
         },
         '& input[type=submit]':{

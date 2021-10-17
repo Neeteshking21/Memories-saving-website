@@ -9,7 +9,7 @@ import {createPost, updatePost} from '../../actions/posts'
 
 const Form = ({currentId, setCurrentId}) => {
   const classes = useStyle() 
-  const post = useSelector((state)=> currentId ? state.posts.find((p) =>p._id==currentId) :null)
+  const post = useSelector((state)=> currentId ? state.posts.find((p) =>p._id === currentId) :null)
   const [postData, setPostData] = useState({
     creator:'', title:'', message:'', tags:'', selectedFile:''
   })
@@ -22,10 +22,15 @@ const Form = ({currentId, setCurrentId}) => {
   const handleSubmit = (evt) =>{
       evt.preventDefault()
 
-      if(currentId)
-        dispatch(updatePost(currentId, postData)) 
-      else
-        dispatch(createPost(postData))  
+      if(currentId){
+        dispatch(updatePost(currentId, postData))
+        console.log(`updatePost`)
+        setCurrentId(null)
+        setPostData({creator:'', title:'', message:'', tags:'', selectedFile:''})
+        
+      }
+      else{
+        dispatch(createPost(postData))  }
 
       setPostData({creator:'', title:'', message:'', tags:'', selectedFile:''})
   }

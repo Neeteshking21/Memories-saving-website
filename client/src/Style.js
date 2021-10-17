@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles'
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   appBar: {
     backgroundColor:'white',
     height: 'fit-content',
@@ -23,9 +23,10 @@ export default makeStyles(() => ({
     height: '50px',
     width: 'auto',
   },
+ 
   body:{
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline'
-  },
+    flexDirection:'column-reverse'
+  }
+
 }))

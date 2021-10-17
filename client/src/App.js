@@ -25,11 +25,11 @@ const App = () => {
          </header>
          <Grow in>
            <div style={{marginTop:'10vh'}}>
-            <Grid className={classes.body} container alignItems="stretch" spacing={3}>
-              <Grid item xs={12} sm={7} className={classes.post}>
+            <Grid className={classes.body} style={{flexDirection:'column-reverse'}} container alignItems="stretch" spacing={3}>
+              <Grid item xs={12} sm={7} style={{alignSelf:'center', marginLeft:'8vw'}} className={classes.post}>
                 <Posts setCurrentId={setCurrentId} />  
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={4} style={{alignSelf:'center'}}>
                 <Form currentId={currentId} setCurrentId={setCurrentId} />
               </Grid>
             </Grid>

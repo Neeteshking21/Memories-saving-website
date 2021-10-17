@@ -4,8 +4,8 @@ import { Favorite, Delete, Edit } from '@mui/icons-material/';
 import useStyles from './Style'
 import moment from 'moment'
 import {useDispatch} from 'react-redux'
-import {deletePost} from '../../../actions/posts'
-
+import {deletePost, likePost} from '../../../actions/posts'
+import like from '../../../assets/like.mp3'
 
 const Post = ({post, setCurrentId}) => {
     const classes = useStyles()
@@ -26,8 +26,9 @@ const Post = ({post, setCurrentId}) => {
           </CardContent>
 
           <CardActions className={classes.CardActions}>
-            <Button size="small" color="secondary" onClick={()=>{}}>
+            <Button size="small" color="secondary" onClick={()=>{ dispatch(likePost(post._id)); post.likeCount += 1; new Audio(like).play(); } }>
                 <Favorite fontSize="small"/>
+                 &nbsp;
                 {post.likeCount}
             </Button>    
             <Button size="small" color="primary" onClick={()=> dispatch(deletePost(post._id)) }>

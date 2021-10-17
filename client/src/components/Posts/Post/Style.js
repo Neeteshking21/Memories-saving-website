@@ -3,6 +3,6 @@ import { makeStyles } from '@mui/styles'
 export default makeStyles(()=>({
     card:{
         height:'fit-content',
-        width:'auto'
+        width:'fit-content'
     },      
 }))

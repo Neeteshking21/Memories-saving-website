@@ -24,9 +24,5 @@ export default makeStyles((theme) => ({
     width: 'auto',
   },
  
-  body:{
-    display: 'flex',
-    flexDirection:'column-reverse'
-  }
 
 }))

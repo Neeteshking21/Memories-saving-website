@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import Memories from './images/images.png'
 import useStyles from './Style'
 import {getPost} from './actions/posts'
+import './App.css'
 
 const App = () => {
 
@@ -25,11 +26,11 @@ const App = () => {
          </header>
          <Grow in>
            <div style={{marginTop:'10vh'}}>
-            <Grid className={classes.body} style={{flexDirection:'column-reverse'}} container alignItems="stretch" spacing={3}>
-              <Grid item xs={12} sm={7} style={{alignSelf:'center', marginLeft:'8vw'}} className={classes.post}>
-                <Posts setCurrentId={setCurrentId} />  
+            <Grid id="content" container  alignItems="stretch" spacing={3}>
+              <Grid item xs={12} sm={7}>
+                <Posts setCurrentId={setCurrentId}  />  
               </Grid>
-              <Grid item xs={12} sm={4} style={{alignSelf:'center'}}>
+              <Grid item xs={12} sm={4}>
                 <Form currentId={currentId} setCurrentId={setCurrentId} />
               </Grid>
             </Grid>
